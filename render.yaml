@@ -1,8 +1,6 @@
 databases:
   - name: simplePagedb
     plan: free
-    databaseName: simplePage
-    user: simplePage
 
 services:
   - type: web
