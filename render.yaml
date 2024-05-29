@@ -1,0 +1,21 @@
+databases:
+  - name: simplePagedb
+    plan: free
+    databaseName: simplePage
+    user: simplePage
+
+services:
+  - type: web
+    plan: free
+    name: simplePage
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "python -m gunicorn simplePage.asgi:application -k uvicorn.workers.UvicornWorker"    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: simplePagedb
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
