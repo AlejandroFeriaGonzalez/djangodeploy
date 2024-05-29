@@ -1,0 +1,12 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "driver": "PostgreSQL",
+            "connectString": "postgresql://postgres:postgres@localhost:5432/simplepagedb",
+            "name": "simpledb",
+            "connectionTimeout": 600
+        }
+    ]
+}

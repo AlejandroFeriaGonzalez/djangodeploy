@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-frc_)1(urh8in&5c8--)-482$gvdqvqt^f9aygdhcf@mr3)*!z"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -100,7 +100,7 @@ WSGI_APPLICATION = "simplePage.wsgi.application"
 DATABASES = {
     "default": dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default="postgresql://postgres:postgres@localhost:5432/mysite",
+        default="postgresql://postgres:postgres@localhost:5432/simplepagedb",
         conn_max_age=600,
     )
 }
